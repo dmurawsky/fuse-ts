@@ -1,8 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Fuse from "fuse.js";
 
 function App() {
+  React.useEffect(() => {
+    const fuse = new Fuse(["tst", "example"]);
+    fuse.search("test");
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
